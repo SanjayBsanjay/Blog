@@ -52,14 +52,15 @@ use App\Models\Tag;
 // Route::get('/blogs/search', [BlogController::class, 'search'])->name('blogs.search');
 
 
+
 // Route::get('/blog/{slug}', [BlogController::class, 'detail'])->name('blogs.detail');
 
 
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index'); // All posts
 Route::get('/blogs/featured', [BlogController::class, 'featured'])->name('blogs.featured'); // Featured posts
 Route::get('/blogs/category/{name}', [BlogController::class, 'categoryBlogs'])->name('category.blogs');
+Route::get('/blogs/search', [BlogController::class, 'search'])->name('blogs.search');
 Route::get('/blogs/{slug}', [BlogController::class, 'detail'])->name('blogs.detail'); // Article detail page
 Route::get('/blogs/tag/{slug}', [BlogController::class, 'byTag'])->name('blogs.byTag'); // Articles by tag
-Route::get('/blogs/search', [BlogController::class, 'search'])->name('blogs.search');
 
 
